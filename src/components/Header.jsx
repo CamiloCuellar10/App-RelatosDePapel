@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 
 const Header = () => {
