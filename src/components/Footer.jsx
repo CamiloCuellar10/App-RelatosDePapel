@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white text-center py-3 fixed-bottom w-100">
+        <footer className="bg-dark text-white text-center py-1 fixed-bottom w-100">
             <div className="container">
                 <p>&copy; 2024 Relatos De Papel.</p>
                 <p>&copy; Creado por Christian Camilo Cuellar Pira - UNIR</p>
