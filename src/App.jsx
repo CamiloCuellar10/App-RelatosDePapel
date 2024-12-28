@@ -12,14 +12,15 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import BookDetail from './components/BookDetail';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+import OrderConfirmation from './components/OrderConfirmation';
 
 const books = [
-    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez' },
-    { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes' },
-    { id: 3, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez' },
-    { id: 4, title: 'La Sombra del Viento', author: 'Carlos Ruiz Zafón' },
-    { id: 5, title: '1984', author: 'George Orwell' },
-    // Agrega más libros según sea necesario
+    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000 },
+    { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 45000 },
+    { id: 3, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000 },
+    { id: 4, title: 'La Sombra del Viento', author: 'Carlos Ruiz Zafón', price: 60000 },
+    { id: 5, title: '1984', author: 'George Orwell', price: 40000 }
 ];
 
 function App() {
@@ -55,18 +56,24 @@ function App() {
     });
   };
 
+  const handleClearCart = () => {
+    setCartItems([]);
+  };
+
   const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <Router>
       <div>
-        <Header cartItemCount={cartItemCount} />
+        <Header cartItems={cartItems} />
         <main>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/home" element={<Home books={books} onAddToCart={handleAddToCart} />} />
             <Route path="/book/:id" element={<BookDetail books={books} onAddToCart={handleAddToCart} />} />
             <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={handleAddToCart} onRemove={handleRemoveFromCart} />} />
+            <Route path="/checkout" element={<Checkout cartItems={cartItems} onClearCart={handleClearCart} />} />
+            <Route path="/order-confirmation" element={<OrderConfirmation />} />
           </Routes>
         </main>
         <Footer />

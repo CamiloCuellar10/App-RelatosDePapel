@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Home = ({ books, onAddToCart }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        console.log('Bienvenido a la página principal');
+    }, []);
 
     const filteredBooks = books.filter(book =>
         book.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -33,6 +37,7 @@ const Home = ({ books, onAddToCart }) => {
                             <div className="card-body">
                                 <h5 className="card-title">{book.title}</h5>
                                 <p className="card-text">Autor: {book.author}</p>
+                                <p className="card-text">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                                 <button className="btn btn-primary" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
                                 <button className="btn btn-secondary" onClick={() => handleBookClick(book.id)}>Ver detalles</button>
                             </div>
