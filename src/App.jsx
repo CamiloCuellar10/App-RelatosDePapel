@@ -20,18 +20,18 @@ import Notifications from './components/Notifications';
 import soundNotification from './assets/Sound_Notification.mp3';
 
 const books = [
-    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000 },
-    { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 45000 },
-    { id: 3, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000 },
-    { id: 4, title: 'La Sombra del Viento', author: 'Carlos Ruiz Zafón', price: 60000 },
-    { id: 5, title: '1984', author: 'George Orwell', price: 40000 },
-    { id: 6, title: 'Matar a un Ruiseñor', author: 'Harper Lee', price: 45000 },
-    { id: 7, title: 'Orgullo y Prejuicio', author: 'Jane Austen', price: 50000 },
-    { id: 8, title: 'El Gran Gatsby', author: 'F. Scott Fitzgerald', price: 55000 },
-    { id: 9, title: 'Crimen y Castigo', author: 'Fiódor Dostoyevski', price: 60000 },
-    { id: 10, title: 'En Busca del Tiempo Perdido', author: 'Marcel Proust', price: 70000 },
-    { id: 11, title: 'Ulises', author: 'James Joyce', price: 65000 },
-    { id: 12, title: 'La Odisea', author: 'Homero', price: 40000 }
+    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: '/src/assets/bookCovers/Libro_CienAñosDeSoledad.jpg' },
+    { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 60000, cover: '/src/assets/bookCovers/Libro_DonQuijote.jpg' },
+    { id: 3, title: 'La Odisea', author: 'Homero', price: 42000, cover: '/src/assets/bookCovers/Libro_LaOdisea.jpg' },
+    { id: 4, title: 'La hojarasca', author: 'Gabriel García Márquez', price: 40000, cover: '/src/assets/bookCovers/Libro_LaHojarasca.jpg' },
+    { id: 5, title: 'Delirio', author: 'Laura Restrepo', price: 45000, cover: '/src/assets/bookCovers/Libro_Delirio.jpg' },
+    { id: 6, title: 'El olvido que seremos', author: 'Héctor Abad Faciolince', price: 47000, cover: '/src/assets/bookCovers/Libro_ElOlvidoQueSeremos.jpg' },
+    { id: 7, title: 'La casa de la belleza', author: 'Melba Escobar', price: 43000, cover: '/src/assets/bookCovers/Libro_LaCasaDeLaBelleza.jpg' },
+    { id: 8, title: 'Satanás', author: 'Mario Mendoza', price: 49000, cover: '/src/assets/bookCovers/Libro_Satanas.jpg' },
+    { id: 9, title: 'Rosario Tijeras', author: 'Jorge Franco', price: 46000, cover: '/src/assets/bookCovers/Libro_RosarioTijeras.jpg' },
+    { id: 10, title: 'Que viva la música', author: 'Andrés Caicedo', price: 70000, cover: '/src/assets/bookCovers/Libro_QueVivaLaMusica.jpg' },
+    { id: 11, title: 'Ulises', author: 'James Joyce', price: 65000, cover: '/src/assets/bookCovers/Libro_Ulises.jpg' },
+    { id: 12, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000, cover: '/src/assets/bookCovers/Libro_ElAmorEnTiemposDeColera.jpg' }
 ];
 
 function App() {

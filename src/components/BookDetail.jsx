@@ -25,6 +25,7 @@ const BookDetail = ({ books, onAddToCart }) => {
     return (
         <div className="container mt-5">
             <h1 className="display-4">{book.title}</h1>
+            <img src={book.cover} className="img-fluid mb-3" alt={book.title} />
             <p className="lead">Autor: {book.author}</p>
             <p>Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
             <p>Detalles adicionales del libro...</p>
