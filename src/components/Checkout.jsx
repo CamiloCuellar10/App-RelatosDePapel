@@ -32,9 +32,9 @@ const Checkout = ({ cartItems, onClearCart, playSound }) => {
                     <div className="row">
                         {cartItems.map(item => (
                             <div key={item.id} className="col-md-4 mb-4">
-                                <div className="card">
+                                <div className="card h-100">
                                     <img src={item.cover} className="card-img-top" alt={item.title} />
-                                    <div className="card-body">
+                                    <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text">Autor: {item.author}</p>
                                         <p className="card-text">Cantidad: {item.quantity}</p>

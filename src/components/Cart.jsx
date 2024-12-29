@@ -37,20 +37,20 @@ const Cart = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
             <div className="row">
                 {cartItems.map(item => (
                     <div key={item.id} className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={item.cover} className="card-img-top" alt={item.title} />
-                            <div className="card-body">
-                                <h5 className="card-title">{item.title}</h5>
-                                <p className="card-text">Autor: {item.author}</p>
-                                <p className="card-text">Cantidad: {item.quantity}</p>
-                                <p className="card-text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
-                                    <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
-                                </div>
+                    <div className="card h-100">
+                        <img src={item.cover} className="card-img-top" alt={item.title} />
+                        <div className="card-body d-flex flex-column">
+                            <h5 className="card-title">{item.title}</h5>
+                            <p className="card-text">Autor: {item.author}</p>
+                            <p className="card-text">Cantidad: {item.quantity}</p>
+                            <p className="card-text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                            <div className="d-flex justify-content-between align-items-center">
+                                <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
+                                <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                </div>
                 ))}
             </div>
             <button className="btn btn-secondary mt-3" onClick={handleBackClick}>Volver a la página principal</button>
