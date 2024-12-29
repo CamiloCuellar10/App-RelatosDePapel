@@ -104,7 +104,7 @@ function App() {
             <Route path="/book/:id" element={<BookDetail books={books} onAddToCart={handleAddToCart} />} />
             <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={handleAddToCart} onRemove={handleRemoveFromCart} />} />
             <Route path="/checkout" element={<Checkout cartItems={cartItems} onClearCart={handleClearCart} playSound={playSound} />} />
-            <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/order-confirmation" element={<OrderConfirmation cartItems={cartItems} />} />
             <Route path="/favorites" element={<Favorites books={books} favoriteBooks={favoriteBooks} />} />
             <Route path="/notifications" element={<Notifications />} />
           </Routes>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Cart = ({ cartItems, onAdd, onRemove }) => {
+const Cart = ({ cartItems, onRemoveFromCart }) => {
     const navigate = useNavigate();
 
     const getTotalBooks = () => {
@@ -34,13 +34,13 @@ const Cart = ({ cartItems, onAdd, onRemove }) => {
                 {cartItems.map(item => (
                     <div key={item.id} className="col-md-4 mb-4">
                         <div className="card">
+                            <img src={item.cover} className="card-img-top" alt={item.title} />
                             <div className="card-body">
                                 <h5 className="card-title">{item.title}</h5>
                                 <p className="card-text">Autor: {item.author}</p>
                                 <p className="card-text">Cantidad: {item.quantity}</p>
                                 <p className="card-text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
-                                <button className="btn btn-danger me-2" onClick={() => onRemove(item.id)}>Eliminar</button>
-                                <button className="btn btn-primary" onClick={() => onAdd(item)}>Agregar más</button>
+                                <button className="btn btn-danger me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
                             </div>
                         </div>
                     </div>

@@ -33,6 +33,7 @@ const Checkout = ({ cartItems, onClearCart, playSound }) => {
                         {cartItems.map(item => (
                             <div key={item.id} className="col-md-4 mb-4">
                                 <div className="card">
+                                    <img src={item.cover} className="card-img-top" alt={item.title} />
                                     <div className="card-body">
                                         <h5 className="card-title">{item.title}</h5>
                                         <p className="card-text">Autor: {item.author}</p>
