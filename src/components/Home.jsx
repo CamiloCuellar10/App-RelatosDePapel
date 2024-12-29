@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
-import '../Home.css'; // Asegúrate de crear este archivo CSS para estilos personalizados
+import '../Home.css';
 
 const Home = ({ books, onAddToCart, favoriteBooks, onToggleFavorite }) => {
     const [searchTerm, setSearchTerm] = useState('');
