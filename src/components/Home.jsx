@@ -22,6 +22,7 @@ const Home = ({ books, onAddToCart, favoriteBooks, onToggleFavorite }) => {
     return (
         <div className="container mt-5">
             <div className="mb-4">
+                <br/>
                 <input
                     type="text"
                     className="form-control"

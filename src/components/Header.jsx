@@ -33,11 +33,8 @@ const Header = ({ cartItems = [] }) => {
                     <button className="btn btn-light me-2" onClick={handleFavoritesClick}>
                         <FaHeart /> Favoritos
                     </button>
-                    <button className="btn btn-light me-2" onClick={handleNotificationsClick}>
-                        <FaBell /> Notificaciones
-                    </button>
                     <Dropdown>
-                        <Dropdown.Toggle variant="light" id="dropdown-basic" className="position-relative">
+                        <Dropdown.Toggle variant="light" id="dropdown-basic" className="position-relative me-2">
                             <FaShoppingCart /> Carrito
                             {cartItems.length > 0 && (
                                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -61,6 +58,9 @@ const Header = ({ cartItems = [] }) => {
                             <Dropdown.Item onClick={handleCartClick}>Ver Carrito</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
+                    <button className="btn btn-light me-2" onClick={handleNotificationsClick}>
+                        <FaBell />
+                    </button>
                 </div>
             </div>
         </header>
