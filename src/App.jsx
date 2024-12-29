@@ -109,9 +109,10 @@ function App() {
             <Route path="/notifications" element={<Notifications />} />
           </Routes>
         </main>
-        <Footer />
         <ToastContainer />
+        <Footer />
       </div>
+      <br /><br /><br /><br />
     </Router>
   );
 }
