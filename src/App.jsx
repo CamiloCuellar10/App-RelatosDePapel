@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Libro_CienAniosDeSoledad from '/src/assets/bookCovers/Libro_CienAniosDeSoledad.jpg';
+
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -20,7 +22,7 @@ import Notifications from './components/Notifications';
 import soundNotification from './assets/Sound_Notification.mp3';
 
 const books = [
-    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: '/src/assets/bookCovers/Libro_CienAniosDeSoledad.jpg' },
+    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: Libro_CienAniosDeSoledad },
     { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 60000, cover: '/src/assets/bookCovers/Libro_DonQuijote.jpg' },
     { id: 3, title: 'La Odisea', author: 'Homero', price: 42000, cover: '/src/assets/bookCovers/Libro_LaOdisea.jpg' },
     { id: 4, title: 'La hojarasca', author: 'Gabriel García Márquez', price: 40000, cover: '/src/assets/bookCovers/Libro_LaHojarasca.jpg' },
