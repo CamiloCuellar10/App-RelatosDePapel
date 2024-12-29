@@ -15,6 +15,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import OrderConfirmation from './components/OrderConfirmation';
 import Favorites from './components/Favorites';
+import Notifications from './components/Notifications';
 
 import soundNotification from './assets/Sound_Notification.mp3';
 
@@ -105,6 +106,7 @@ function App() {
             <Route path="/checkout" element={<Checkout cartItems={cartItems} onClearCart={handleClearCart} playSound={playSound} />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
             <Route path="/favorites" element={<Favorites books={books} favoriteBooks={favoriteBooks} />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Routes>
         </main>
         <Footer />

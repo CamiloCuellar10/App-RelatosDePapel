@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaShoppingCart, FaHome, FaHeart } from 'react-icons/fa';
+import { FaShoppingCart, FaHome, FaHeart, FaBell } from 'react-icons/fa';
 import { Dropdown } from 'react-bootstrap';
 
 const Header = ({ cartItems = [] }) => {
@@ -18,6 +18,10 @@ const Header = ({ cartItems = [] }) => {
         navigate('/favorites');
     };
 
+    const handleNotificationsClick = () => {
+        navigate('/notifications');
+    };
+
     return (
         <header className="bg-primary text-white p-1 fixed-top w-100">
             <div className="container d-flex justify-content-between align-items-center">
@@ -28,6 +32,9 @@ const Header = ({ cartItems = [] }) => {
                     </button>
                     <button className="btn btn-light me-2" onClick={handleFavoritesClick}>
                         <FaHeart /> Favoritos
+                    </button>
+                    <button className="btn btn-light me-2" onClick={handleNotificationsClick}>
+                        <FaBell /> Notificaciones
                     </button>
                     <Dropdown>
                         <Dropdown.Toggle variant="light" id="dropdown-basic" className="position-relative">
