@@ -14,6 +14,7 @@ import BookDetail from './components/BookDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import OrderConfirmation from './components/OrderConfirmation';
+import Favorites from './components/Favorites';
 
 import soundNotification from './assets/Sound_Notification.mp3';
 
@@ -34,6 +35,7 @@ const books = [
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [favoriteBooks, setFavoriteBooks] = useState([]);
 
   const playSound = (sound) => {
     const audio = new Audio(sound);
@@ -78,6 +80,16 @@ function App() {
     setCartItems([]);
   };
 
+  const handleToggleFavorite = (id) => {
+    setFavoriteBooks(prevFavorites => {
+      if (prevFavorites.includes(id)) {
+        return prevFavorites.filter(favId => favId !== id);
+      } else {
+        return [...prevFavorites, id];
+      }
+    });
+  };
+
   const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -87,11 +99,12 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/home" element={<Home books={books} onAddToCart={handleAddToCart} />} />
+            <Route path="/home" element={<Home books={books} onAddToCart={handleAddToCart} onToggleFavorite={handleToggleFavorite} favoriteBooks={favoriteBooks} />} />
             <Route path="/book/:id" element={<BookDetail books={books} onAddToCart={handleAddToCart} />} />
             <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={handleAddToCart} onRemove={handleRemoveFromCart} />} />
             <Route path="/checkout" element={<Checkout cartItems={cartItems} onClearCart={handleClearCart} playSound={playSound} />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/favorites" element={<Favorites books={books} favoriteBooks={favoriteBooks} />} />
           </Routes>
         </main>
         <Footer />

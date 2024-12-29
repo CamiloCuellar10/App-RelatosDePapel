@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa';
 
-const Home = ({ books, onAddToCart }) => {
+const Home = ({ books, onAddToCart, onToggleFavorite, favoriteBooks }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
 
@@ -39,6 +40,12 @@ const Home = ({ books, onAddToCart }) => {
                                 <p className="card-text">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                                 <button className="btn btn-primary" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
                                 <button className="btn btn-secondary" onClick={() => handleBookClick(book.id)}>Ver detalles</button>
+                                <FaHeart
+                                    className="ms-3"
+                                    color={favoriteBooks.includes(book.id) ? 'red' : 'grey'}
+                                    onClick={() => onToggleFavorite(book.id)}
+                                    style={{ cursor: 'pointer' }}
+                                />
                             </div>
                         </div>
                     </div>

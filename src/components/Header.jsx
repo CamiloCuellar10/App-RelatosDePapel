@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaShoppingCart, FaHome, FaBook, FaEye } from 'react-icons/fa';
+import { FaShoppingCart, FaHome, FaHeart } from 'react-icons/fa';
 import { Dropdown } from 'react-bootstrap';
 
 const Header = ({ cartItems = [] }) => {
@@ -14,6 +14,10 @@ const Header = ({ cartItems = [] }) => {
         navigate('/home');
     };
 
+    const handleFavoritesClick = () => {
+        navigate('/favorites');
+    };
+
     return (
         <header className="bg-primary text-white p-1 fixed-top w-100">
             <div className="container d-flex justify-content-between align-items-center">
@@ -21,6 +25,9 @@ const Header = ({ cartItems = [] }) => {
                 <div className="ms-auto d-flex align-items-center">
                     <button className="btn btn-light me-2" onClick={handleHomeClick}>
                         <FaHome /> Inicio
+                    </button>
+                    <button className="btn btn-light me-2" onClick={handleFavoritesClick}>
+                        <FaHeart /> Favoritos
                     </button>
                     <Dropdown>
                         <Dropdown.Toggle variant="light" id="dropdown-basic" className="position-relative">
@@ -39,16 +46,12 @@ const Header = ({ cartItems = [] }) => {
                             ) : (
                                 cartItems.map(item => (
                                     <Dropdown.Item key={item.id}>
-                                        <FaBook className="me-2" />
                                         {item.title} - {item.quantity} x {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
                                     </Dropdown.Item>
                                 ))
                             )}
                             <Dropdown.Divider />
-                            <Dropdown.Item onClick={handleCartClick}>
-                                <FaEye className="me-2" />
-                                Ver Carrito
-                            </Dropdown.Item>
+                            <Dropdown.Item onClick={handleCartClick}>Ver Carrito</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
