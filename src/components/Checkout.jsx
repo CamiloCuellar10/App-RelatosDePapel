@@ -1,8 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import soundPay from '../assets/Sound_Pay.mp3';
 
-const Checkout = ({ cartItems, onClearCart }) => {
+const Checkout = ({ cartItems, onClearCart, playSound }) => {
     const navigate = useNavigate();
 
     const getTotalPrice = () => {
@@ -15,6 +16,7 @@ const Checkout = ({ cartItems, onClearCart }) => {
 
     const handlePayment = () => {
         toast.success('El pedido se ha realizado con éxito.');
+        playSound(soundPay);
         const totalBooks = getTotalBooks();
         const totalPrice = getTotalPrice();
         onClearCart();

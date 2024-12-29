@@ -19,8 +19,7 @@ const Home = ({ books, onAddToCart }) => {
 
     return (
         <div className="container mt-5">
-            <h1 className="display-4">Pagina Principal</h1>
-            <p className="lead">Esta es la página de inicio de Relatos de Papel.</p>
+            <br></br>
             <div className="mb-4">
                 <input
                     type="text"
