@@ -19,7 +19,6 @@ import Libro_QueVivaLaMusica from '/src/assets/bookCovers/Libro_QueVivaLaMusica.
 import Libro_Ulises from '/src/assets/bookCovers/Libro_Ulises.jpg';
 import Libro_ElAmorEnTiemposDeColera from '/src/assets/bookCovers/Libro_ElAmorEnTiemposDeColera.jpg';
 
-
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -116,7 +115,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/home" element={<Home books={books} onAddToCart={handleAddToCart} onToggleFavorite={handleToggleFavorite} favoriteBooks={favoriteBooks} />} />
             <Route path="/book/:id" element={<BookDetail books={books} onAddToCart={handleAddToCart} />} />
-            <Route path="/cart" element={<Cart cartItems={cartItems} onAdd={handleAddToCart} onRemove={handleRemoveFromCart} />} />
+            <Route path="/cart" element={<Cart cartItems={cartItems} onAddToCart={handleAddToCart} onRemoveFromCart={handleRemoveFromCart} />} />
             <Route path="/checkout" element={<Checkout cartItems={cartItems} onClearCart={handleClearCart} playSound={playSound} />} />
             <Route path="/order-confirmation" element={<OrderConfirmation cartItems={cartItems} />} />
             <Route path="/favorites" element={<Favorites books={books} favoriteBooks={favoriteBooks} />} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Cart = ({ cartItems, onRemoveFromCart }) => {
+const Cart = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
     const navigate = useNavigate();
 
     const getTotalBooks = () => {
@@ -30,6 +30,10 @@ const Cart = ({ cartItems, onRemoveFromCart }) => {
                     <p className="lead">Total a pagar: {getTotalPrice().toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                 </>
             )}
+            {cartItems.length > 0 && (
+                <button className="btn btn-success mt-3 ms-3" onClick={handleCheckoutClick}>Proceder al Pago</button>
+            )}
+            <br/>    <br/>  
             <div className="row">
                 {cartItems.map(item => (
                     <div key={item.id} className="col-md-4 mb-4">
@@ -40,16 +44,17 @@ const Cart = ({ cartItems, onRemoveFromCart }) => {
                                 <p className="card-text">Autor: {item.author}</p>
                                 <p className="card-text">Cantidad: {item.quantity}</p>
                                 <p className="card-text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
-                                <button className="btn btn-danger me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
+                                    <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
             <button className="btn btn-secondary mt-3" onClick={handleBackClick}>Volver a la página principal</button>
-            {cartItems.length > 0 && (
-                <button className="btn btn-success mt-3 ms-3" onClick={handleCheckoutClick}>Proceder al Pago</button>
-            )}
+            
         </div>
     );
 };
