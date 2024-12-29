@@ -22,12 +22,12 @@ const OrderConfirmation = () => {
                 {cartItems.map(item => (
                     <div key={item.id} className="col-md-4 mb-4">
                     <div className="card h-100">
-                        <img src={item.cover} className="card-img-top" alt={item.title} />
+                        <img src={item.cover} className="card__img-top" alt={item.title} />
                         <div className="card-body d-flex flex-column">
-                            <h5 className="card-title">{item.title}</h5>
-                            <p className="card-text">Autor: {item.author}</p>
-                            <p className="card-text">Cantidad: {item.quantity}</p>
-                            <p className="card-text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                            <h5 className="card__title">{item.title}</h5>
+                            <p className="card__text">Autor: {item.author}</p>
+                            <p className="card__text">Cantidad: {item.quantity}</p>
+                            <p className="card__text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                         </div>
                     </div>
                 </div>

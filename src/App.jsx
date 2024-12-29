@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 import Libro_CienAniosDeSoledad from '/src/assets/bookCovers/Libro_CienAniosDeSoledad.jpg';
 import Libro_DonQuijote from '/src/assets/bookCovers/Libro_DonQuijote.jpg';
 import Libro_LaOdisea from '/src/assets/bookCovers/Libro_LaOdisea.jpg';

@@ -35,11 +35,11 @@ const Home = ({ books, onAddToCart, favoriteBooks, onToggleFavorite }) => {
                 {filteredBooks.map(book => (
                     <div key={book.id} className="col-md-4 mb-4">
                         <div className="card h-100">
-                            <img src={book.cover} className="card-img-top" alt={book.title} />
+                            <img src={book.cover} className="card__img-top" alt={book.title} />
                             <div className="card-body d-flex flex-column">
-                                <h5 className="card-title">{book.title}</h5>
-                                <p className="card-text">Autor: {book.author}</p>
-                                <p className="card-text">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                                <h5 className="card__title">{book.title}</h5>
+                                <p className="card__text">Autor: {book.author}</p>
+                                <p className="card__text">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                                 <div className="mt-auto d-flex justify-content-between align-items-center">
                                     <button className="btn btn-primary me-2" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
                                     <button className="btn btn-secondary" onClick={() => handleBookClick(book.id)}>Ver detalles</button>

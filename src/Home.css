@@ -1,9 +1,4 @@
-.card-img-top {
-    height: 300px; 
-    object-fit: contain;
-    width: 100%; 
-}
-
+/* Block: card */
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
     border-radius: 15px; 
@@ -15,25 +10,35 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-body {
+/* Element: card__img-top */
+.card__img-top {
+    height: 300px; 
+    object-fit: contain;
+    width: 100%; 
+}
+
+/* Element: card__body */
+.card__body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     padding: 20px;
 }
 
-.card-title {
+/* Element: card__title */
+.card__title {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.card-text {
+/* Element: card__text */
+.card__text {
     font-size: 1rem;
     margin-bottom: 10px; 
 }
 
-
-.fa-heart {
+/* Element: card__heart */
+.card__heart {
     margin-top: 10px;
     cursor: pointer; 
 }
