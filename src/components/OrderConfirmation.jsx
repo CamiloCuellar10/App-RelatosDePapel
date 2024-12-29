@@ -26,7 +26,7 @@ const OrderConfirmation = () => {
                         <div className="card-body d-flex flex-column">
                             <h5 className="card__title">{item.title}</h5>
                             <p className="card__text">Autor: {item.author}</p>
-                            <p className="card__text">Cantidad: {item.quantity}</p>
+                            <p className="card__price">Cantidad: {item.quantity}</p>
                             <p className="card__text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                         </div>
                     </div>

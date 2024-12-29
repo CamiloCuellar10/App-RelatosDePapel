@@ -37,6 +37,12 @@
     margin-bottom: 10px; 
 }
 
+.card__price {
+    font-weight: bold;  /* Texto en negrilla */
+    color: #007bff;     /* Azul (Bootstrap primary blue) */
+    font-size: 1rem;    /* Ajustar tamaño (opcional) */
+}
+
 /* Element: card__heart */
 .card__heart {
     margin-top: 10px;

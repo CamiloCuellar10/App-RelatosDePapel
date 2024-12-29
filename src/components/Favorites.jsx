@@ -23,7 +23,7 @@ const Favorites = ({ favoriteBooks, books, onToggleFavorite, onAddToCart }) => {
                             <div className="card__body d-flex flex-column">
                                 <h5 className="card__title">{book.title}</h5>
                                 <p className="card__text">Autor: {book.author}</p>
-                                <p className="card__text">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                                <p className="card__price">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                                 <div className="mt-auto d-flex justify-content-between align-items-center">
                                     <button className="btn btn-primary me-2" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
                                     <button className="btn btn-secondary" onClick={() => handleBookClick(book.id)}>Ver detalles</button>

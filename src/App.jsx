@@ -38,7 +38,7 @@ import soundNotification from './assets/Sound_Notification.mp3';
 const books = [
   { id: 1, title: 'La Odisea', author: 'Homero', price: 42000, cover: Libro_LaOdisea },
   { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 60000, cover: Libro_DonQuijote },
-  { id: 3, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: Libro_CienAniosDeSoledad },
+  { id: 3, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000, cover: Libro_ElAmorEnTiemposDeColera },
   { id: 4, title: 'La hojarasca', author: 'Gabriel García Márquez', price: 40000, cover: Libro_LaHojarasca },
   { id: 5, title: 'Delirio', author: 'Laura Restrepo', price: 45000, cover: Libro_Delirio },
   { id: 6, title: 'El olvido que seremos', author: 'Héctor Abad Faciolince', price: 47000, cover: Libro_ElOlvidoQueSeremos },
@@ -47,7 +47,7 @@ const books = [
   { id: 9, title: 'Rosario Tijeras', author: 'Jorge Franco', price: 46000, cover: Libro_RosarioTijeras },
   { id: 10, title: 'Que viva la música', author: 'Andrés Caicedo', price: 70000, cover: Libro_QueVivaLaMusica },
   { id: 11, title: 'Ulises', author: 'James Joyce', price: 65000, cover: Libro_Ulises },
-  { id: 12, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000, cover: Libro_ElAmorEnTiemposDeColera },
+  { id: 12, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: Libro_CienAniosDeSoledad },
   { id: 13, title: 'Cien Años de Soledad - Edición Especial', author: 'Gabriel García Márquez', price: 80000, cover: Libro_CienAniosDeSoledad_Especial },
   { id: 14, title: 'Cien Años de Soledad - Edición Original', author: 'Gabriel García Márquez', price: 200000, cover: Libro_CienAniosDeSoledad_Original }
 ];

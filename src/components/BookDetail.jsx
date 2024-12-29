@@ -27,7 +27,7 @@ const BookDetail = ({ books, onAddToCart }) => {
             <h1 className="display-4">{book.title}</h1>
             <img src={book.cover} className="img-fluid mb-3" alt={book.title} />
             <p className="lead">Autor: {book.author}</p>
-            <p>Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+            <p className="card__price">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
             <p>Detalles adicionales del libro...</p>
             <button className="btn btn-primary mt-3 me-2" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
             <button className="btn btn-secondary mt-3" onClick={handleBackClick}>Volver a la página principal</button>

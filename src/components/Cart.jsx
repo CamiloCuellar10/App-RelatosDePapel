@@ -43,7 +43,7 @@ const Cart = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
                             <h5 className="card__title">{item.title}</h5>
                             <p className="card__text">Autor: {item.author}</p>
                             <p className="card__text">Cantidad: {item.quantity}</p>
-                            <p className="card__text">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                            <p className="card__price">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
                             <div className="d-flex justify-content-between align-items-center">
                                 <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
                                 <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
