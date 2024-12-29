@@ -7,6 +7,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Libro_CienAniosDeSoledad from '/src/assets/bookCovers/Libro_CienAniosDeSoledad.jpg';
+import Libro_DonQuijote from '/src/assets/bookCovers/Libro_DonQuijote.jpg';
+import Libro_LaOdisea from '/src/assets/bookCovers/Libro_LaOdisea.jpg';
+import Libro_LaHojarasca from '/src/assets/bookCovers/Libro_LaHojarasca.jpg';
+import Libro_Delirio from '/src/assets/bookCovers/Libro_Delirio.jpg';
+import Libro_ElOlvidoQueSeremos from '/src/assets/bookCovers/Libro_ElOlvidoQueSeremos.jpg';
+import Libro_LaCasaDeLaBelleza from '/src/assets/bookCovers/Libro_LaCasaDeLaBelleza.jpg';
+import Libro_Satanas from '/src/assets/bookCovers/Libro_Satanas.jpg';
+import Libro_RosarioTijeras from '/src/assets/bookCovers/Libro_RosarioTijeras.jpg';
+import Libro_QueVivaLaMusica from '/src/assets/bookCovers/Libro_QueVivaLaMusica.jpg';
+import Libro_Ulises from '/src/assets/bookCovers/Libro_Ulises.jpg';
+import Libro_ElAmorEnTiemposDeColera from '/src/assets/bookCovers/Libro_ElAmorEnTiemposDeColera.jpg';
+
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -22,18 +34,18 @@ import Notifications from './components/Notifications';
 import soundNotification from './assets/Sound_Notification.mp3';
 
 const books = [
-    { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: Libro_CienAniosDeSoledad },
-    { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 60000, cover: '/src/assets/bookCovers/Libro_DonQuijote.jpg' },
-    { id: 3, title: 'La Odisea', author: 'Homero', price: 42000, cover: '/src/assets/bookCovers/Libro_LaOdisea.jpg' },
-    { id: 4, title: 'La hojarasca', author: 'Gabriel García Márquez', price: 40000, cover: '/src/assets/bookCovers/Libro_LaHojarasca.jpg' },
-    { id: 5, title: 'Delirio', author: 'Laura Restrepo', price: 45000, cover: '/src/assets/bookCovers/Libro_Delirio.jpg' },
-    { id: 6, title: 'El olvido que seremos', author: 'Héctor Abad Faciolince', price: 47000, cover: '/src/assets/bookCovers/Libro_ElOlvidoQueSeremos.jpg' },
-    { id: 7, title: 'La casa de la belleza', author: 'Melba Escobar', price: 43000, cover: '/src/assets/bookCovers/Libro_LaCasaDeLaBelleza.jpg' },
-    { id: 8, title: 'Satanás', author: 'Mario Mendoza', price: 49000, cover: '/src/assets/bookCovers/Libro_Satanas.jpg' },
-    { id: 9, title: 'Rosario Tijeras', author: 'Jorge Franco', price: 46000, cover: '/src/assets/bookCovers/Libro_RosarioTijeras.jpg' },
-    { id: 10, title: 'Que viva la música', author: 'Andrés Caicedo', price: 70000, cover: '/src/assets/bookCovers/Libro_QueVivaLaMusica.jpg' },
-    { id: 11, title: 'Ulises', author: 'James Joyce', price: 65000, cover: '/src/assets/bookCovers/Libro_Ulises.jpg' },
-    { id: 12, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000, cover: '/src/assets/bookCovers/Libro_ElAmorEnTiemposDeColera.jpg' }
+  { id: 1, title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', price: 50000, cover: Libro_CienAniosDeSoledad },
+  { id: 2, title: 'Don Quijote de la Mancha', author: 'Miguel de Cervantes', price: 60000, cover: Libro_DonQuijote },
+  { id: 3, title: 'La Odisea', author: 'Homero', price: 42000, cover: Libro_LaOdisea },
+  { id: 4, title: 'La hojarasca', author: 'Gabriel García Márquez', price: 40000, cover: Libro_LaHojarasca },
+  { id: 5, title: 'Delirio', author: 'Laura Restrepo', price: 45000, cover: Libro_Delirio },
+  { id: 6, title: 'El olvido que seremos', author: 'Héctor Abad Faciolince', price: 47000, cover: Libro_ElOlvidoQueSeremos },
+  { id: 7, title: 'La casa de la belleza', author: 'Melba Escobar', price: 43000, cover: Libro_LaCasaDeLaBelleza },
+  { id: 8, title: 'Satanás', author: 'Mario Mendoza', price: 49000, cover: Libro_Satanas },
+  { id: 9, title: 'Rosario Tijeras', author: 'Jorge Franco', price: 46000, cover: Libro_RosarioTijeras },
+  { id: 10, title: 'Que viva la música', author: 'Andrés Caicedo', price: 70000, cover: Libro_QueVivaLaMusica },
+  { id: 11, title: 'Ulises', author: 'James Joyce', price: 65000, cover: Libro_Ulises },
+  { id: 12, title: 'El Amor en los Tiempos del Cólera', author: 'Gabriel García Márquez', price: 55000, cover: Libro_ElAmorEnTiemposDeColera }
 ];
 
 function App() {
