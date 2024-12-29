@@ -22,12 +22,17 @@ const Landing = () => {
 
     return (
         <div className="container mt-5">
-            <h1 className="display-4">Bienvenido</h1>
-            <p className="lead">Esta es la página de inicio de Relatos de Papel.</p>
-            <br />
-            <p className="lead">Serás redirigido a la página principal en {counter} segundos...</p>
+            <div className="text-center p-5 rounded shadow">
+                <h1 className="display-4 mb-4">Bienvenido</h1>
+                <p className="lead mb-4">Esta es la página de inicio de Relatos de Papel.</p>
+                <p className="lead">Redirigiendo a la página principal en </p>
+                <span className="display-2 text-danger">{counter}</span>
+                <p className="lead">Segundos</p>
+            </div>
         </div>
     );
+
+    
 };
 
 export default Landing;

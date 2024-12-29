@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaCheckCircle } from 'react-icons/fa';
+import Confetti from 'react-confetti';
 
 const OrderConfirmation = () => {
     const location = useLocation();
@@ -9,6 +10,7 @@ const OrderConfirmation = () => {
 
     return (
         <div className="container mt-5 text-center">
+            <Confetti colors={['#00FF00']} />
             <br />
             <FaCheckCircle size={100} color="green" />
             <h1 className="display-4 mt-3">Compra Realizada</h1>

@@ -15,7 +15,7 @@ const Checkout = ({ cartItems, onClearCart, playSound }) => {
     };
 
     const handlePayment = () => {
-        toast.success('El pedido se ha realizado con éxito.');
+        toast.success('Pago realizado exitosamente.');
         playSound(soundPay);
         const totalBooks = getTotalBooks();
         const totalPrice = getTotalPrice();
