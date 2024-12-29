@@ -1,13 +1,9 @@
 import React from 'react';
 import { FaCheckCircle, FaInfoCircle, FaExclamationCircle } from 'react-icons/fa';
+import useNotifications from '../hooks/useNotifications';
 
 const Notifications = () => {
-    const notifications = [
-        { id: 1, message: 'Tu pedido ha sido enviado.', type: 'success' },
-        { id: 2, message: 'Tu libro favorito está en oferta.', type: 'info' },
-        { id: 3, message: 'Nuevo libro añadido a la colección.', type: 'info' },
-        { id: 4, message: 'Error al procesar el pago.', type: 'error' }
-    ];
+    const { notifications } = useNotifications();
 
     const getIcon = (type) => {
         switch (type) {

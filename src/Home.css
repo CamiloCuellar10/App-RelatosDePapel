@@ -1,13 +1,13 @@
 .card-img-top {
-    height: 300px; /* Ajustar la altura de la imagen */
-    object-fit: contain; /* Mantener las proporciones de la imagen */
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 300px; 
+    object-fit: contain;
+    width: 100%; 
 }
 
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Ocultar contenido desbordado */
+    border-radius: 15px; 
+    overflow: hidden;
 }
 
 .card:hover {
@@ -19,21 +19,21 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 20px; /* Ajustar el padding para mejorar la presentación */
+    padding: 20px;
 }
 
 .card-title {
-    font-size: 1.5rem; /* Ajustar el tamaño de la fuente del título */
-    margin-bottom: 10px; /* Añadir margen inferior para separación */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 1rem; /* Ajustar el tamaño de la fuente del texto */
-    margin-bottom: 10px; /* Añadir margen inferior para separación */
+    font-size: 1rem;
+    margin-bottom: 10px; 
 }
 
 
 .fa-heart {
-    margin-top: 10px; /* Añadir margen superior para separación */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+    margin-top: 10px;
+    cursor: pointer; 
 }
