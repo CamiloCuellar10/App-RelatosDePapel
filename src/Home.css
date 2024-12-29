@@ -1,6 +1,6 @@
 .card-img-top {
     height: 300px; /* Ajustar la altura de la imagen */
-    object-fit: cover; /* Mantener las proporciones de la imagen */
+    object-fit: contain; /* Mantener las proporciones de la imagen */
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
 }
 
@@ -32,10 +32,6 @@
     margin-bottom: 10px; /* Añadir margen inferior para separación */
 }
 
-.btn-card{
-    font-size: 1rem; /* Ajustar el tamaño de la fuente de los botones */
-    padding: 10px 20px; /* Ajustar el padding de los botones */
-}
 
 .fa-heart {
     margin-top: 10px; /* Añadir margen superior para separación */
