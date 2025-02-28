@@ -9,7 +9,7 @@ const Cart = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
     };
 
     const getTotalPrice = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+        return cartItems.reduce((total, item) => total + (item.precio || 0) * item.quantity, 0);
     };
 
     const handleBackClick = () => {
@@ -37,24 +37,27 @@ const Cart = ({ cartItems, onAddToCart, onRemoveFromCart }) => {
             <div className="row">
                 {cartItems.map(item => (
                     <div key={item.id} className="col-md-4 mb-4">
-                    <div className="card h-100">
-                        <img src={item.cover} className="card__img-top" alt={item.title} />
-                        <div className="card__body d-flex flex-column">
-                            <h5 className="card__title">{item.title}</h5>
-                            <p className="card__text">Autor: {item.author}</p>
-                            <p className="card__text">Cantidad: {item.quantity}</p>
-                            <p className="card__price">Precio: {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
-                            <div className="d-flex justify-content-between align-items-center">
-                                <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
-                                <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
+                        <div className="card h-100">
+                            <img src={item.cover || item.imagen} className="card__img-top" alt={item.title || item.titulo} />
+                            <div className="card__body d-flex flex-column">
+                                <h5 className="card__title">{item.title || item.titulo}</h5>
+                                <p className="card__text">Autor: {item.author || item.autor}</p>
+                                <p className="card__text">Cantidad: {item.quantity}</p>
+                                <p className="card__price">Precio: {item.precio.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <button className="btn btn-secondary me-2" onClick={() => onRemoveFromCart(item.id)}>Eliminar</button>
+                                    <button className="btn btn-primary me-2" onClick={() => onAddToCart(item)}>Agregar</button>
+                                </div>
                             </div>
-                        </div>
-                    </div> 
-                </div>
+                        </div> 
+                    </div>
                 ))}
             </div>
             <button className="btn btn-secondary mt-3" onClick={handleBackClick}>Volver a la página principal</button>
-            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
     );
 };

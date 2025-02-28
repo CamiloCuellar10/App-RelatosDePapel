@@ -50,7 +50,7 @@ const Header = ({ cartItems = [] }) => {
                             ) : (
                                 cartItems.map(item => (
                                     <Dropdown.Item key={item.id}>
-                                        {item.title} - {item.quantity} x {item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
+                                        {item.titulo} - {item.quantity} x {(item.precio || 0).toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}
                                     </Dropdown.Item>
                                 ))
                             )}

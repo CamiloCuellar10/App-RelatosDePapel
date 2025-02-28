@@ -11,6 +11,10 @@ const Favorites = ({ favoriteBooks, books, onToggleFavorite, onAddToCart }) => {
         navigate(`/book/${id}`);
     };
 
+    console.log('favoriteBooks:', favoriteBooks); // Depuración
+    console.log('books:', books); // Depuración
+    console.log('favoriteBookDetails:', favoriteBookDetails); // Depuración
+
     return (
         <div className="container mt-5">
             <h1>Favoritos</h1>
@@ -19,11 +23,13 @@ const Favorites = ({ favoriteBooks, books, onToggleFavorite, onAddToCart }) => {
                 {favoriteBookDetails.map(book => (
                     <div key={book.id} className="col-md-4 mb-4">
                         <div className="card h-100">
-                            <img src={book.cover} className="card__img-top" alt={book.title} />
+                            <img src={book.cover || book.imagen} className="card__img-top" alt={book.title || book.titulo} />
                             <div className="card__body d-flex flex-column">
-                                <h5 className="card__title">{book.title}</h5>
-                                <p className="card__text">Autor: {book.author}</p>
-                                <p className="card__price">Precio: {book.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                                <h5 className="card__title">{book.title || book.titulo}</h5>
+                                <p className="card__text">Autor: {book.author || book.autor}</p>
+                                <p className="card__price">
+                                    Precio: {book.precio ? book.precio.toLocaleString('es-CO', { style: 'currency', currency: 'COP' }) : 'N/A'}
+                                </p>
                                 <div className="mt-auto d-flex justify-content-between align-items-center">
                                     <button className="btn btn-primary me-2" onClick={() => onAddToCart(book)}>Agregar al carrito</button>
                                     <button className="btn btn-secondary" onClick={() => handleBookClick(book.id)}>Ver detalles</button>
